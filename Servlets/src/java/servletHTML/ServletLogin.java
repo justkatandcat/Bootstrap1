@@ -14,15 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServletLogin extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String user = req.getParameter("user");
 		String pass = req.getParameter("password");
 		if ("emmanuel".equals(user) && "cecyt9".equals(pass)) {
-			response(resp, "logeo correcto");
+			response(resp, "logeo correcto, ");
 		} else {
-			response(resp, "logeo incorrecto");
+			response(resp, "logeo incorrecto, ");
 		}
+                response(resp, user);
+                
 	}
 
 	private void response(HttpServletResponse resp, String msg)

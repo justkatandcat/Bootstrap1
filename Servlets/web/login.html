@@ -1,18 +1,60 @@
-<html>
-    <body>
-        <!--<form method="GET" action='ServletLogin'>-->
-        <form method="POST" action='ServletLogin'>
-            <table>
-                <tr>
-                    <td>User</td>
-                    <td><input name="user" /></td>
-                </tr>
-                <tr>
-                    <td>password</td>
-                    <td><input name="password" /></td>
-                </tr>
-            </table>
-            <input type="submit" />
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        </head>
+    <body class="container">
+        <!--<form method="GET" action='ServletLogin'>-->  
+        <nav class="navbar navbar-inverse container">
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </nav>
+        <form class="navbar-form navbar-center col-lg-offset-2 " role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
         </form>
+        <form method="post" action='ServletLogin' class="form-inline" role="form">
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    User                  
+                    <input class="form-control" placeholder="Username" aria-describedby="basic-addon1" name="user" />
+                    <br><br>
+                    password
+                    <input class="form-control" name="password" /> <br>
+                    <p class="help-block">Ejemplo de texto de ayuda.</p>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Activa esta casilla
+                        </label>
+                        
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="opciones" id="opciones_2" value="opcion_2">
+                            Esta otra opción
+                        </label>
+                    </div>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+            <input type="submit" class="btn btn-default"/>
+                </div>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+        <script src="js/bootstrap.min.js"></script> 
     </body>
 </html>
